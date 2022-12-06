@@ -27,7 +27,8 @@ const Daily = () => {
       width: '20em',
       height: `${(16 / 9 * 20) + 2.5}em`,
       padding: '0.3em',
-      backgroundColor: 'var(--ac)'
+      backgroundColor: 'var(--ac)',
+      textAlign: 'center'
     },
     noVideo: {
       width: '20em',
@@ -57,7 +58,7 @@ const Daily = () => {
           ? <div style={styles.noVideo}><h3 style={styles.comingSoon}>скоро будет</h3></div>
           : <HoverVideoPlayer muted={false} key={i} videoSrc={video.link}/>
           }
-          <p key={`${i}p`} style={styles.text}>{video.date}</p>
+          <p key={`${i}p`} style={styles.text}>видео {i+1}</p>
         </div>
       ))}
     </div>
